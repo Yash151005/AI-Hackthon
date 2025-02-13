@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cyber Law Chatbot</title>
+    <script>
+        async function sendMessage() {
+            const prompt = document.getElementById("prompt").value;
+            const response = await fetch('/bot/chat', {
+                method: "POST",
+                headers: {"Content-Type": "application/json"},
+                body: JSON.stringify({prompt})
+            });
+            const data = await response.json();
+            document.getElementById("response").innerHTML = data.response;
+            loadHistory();
+        }
+
+        async function loadHistory() {
+            const response = await fetch('/bot/history');
+            const history = await response.json();
+            let sidebar = document.getElementById("history");
+            sidebar.innerHTML = "";
+            history.forEach(chat => {
+                sidebar.innerHTML += `<p><b>Q:</b> ${chat.prompt} <br> <b>A:</b> ${chat.response}</p><hr>`;
+            });
+        }
+    </script>
+</head>
+<body onload="loadHistory()">
+    <h1>Cyber Law Chatbot</h1>
+    <input type="text" id="prompt" placeholder="Ask about cyber laws">
+    <button onclick="sendMessage()">Send</button>
+    <div>
+        <h2>Response:</h2>
+        <p id="response"></p>
+    </div>
+    <div>
+        <h2>Chat History</h2>
+        <div id="history"></div>
+    </div>
+</body>
+</html>
