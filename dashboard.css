@@ -129,17 +129,18 @@ h1 {
     margin-top: 20px;
     text-align: center;
     padding: 15px;
-    background-color: #333;
+    background-color: #20e5f6;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    width: 80%;
+    width: 60%;
     margin-bottom: 10px;
 }
 
 .link-box a {
-    color: white;
+    color: black;
     text-decoration: none;
     font-size: 1.1em;
+    font-weight: bold;
     display: block;
     text-align: center;
 }
