@@ -1,13 +1,32 @@
-/* General Styles */
-/* Body */
+
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #14213d; /* Deep blue background */
+    background-color: #14213d; /* Fallback color */
     color: white;
     text-align: center;
+    position: relative; /* To allow the pseudo-element overlay */
 }
+
+/* Pseudo-element for background overlay */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('background2.png'); /* Path to your image */
+    height: 850px;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    opacity: 0.7; /* Adjust opacity here (0 is fully transparent, 1 is fully opaque) */
+    z-index: -1; /* Ensures the image is behind the content */
+}
+
+
 
 /* Header */
 header {
@@ -15,12 +34,21 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #14213d; /* Deep blue header */
 }
 
-.logo {
-    font-size: 24px;
-    font-weight: bold;
+.logo-container {
+    display: flex;
+    align-items: center; /* Center logo and text vertically */
+}
+
+.logo-img{
+    height: 70px;
+    width: 70px;
+    margin-right: 20px;
+}
+
+.logo-text{
+    display: flex;
 }
 
 nav a {
@@ -45,7 +73,7 @@ nav a {
 }
 
 .tagline {
-    font-size: 16px;
+    font-size: 20px;
     background-color: rgba(255, 255, 255, 0.1);
     display: inline-block;
     padding: 5px 10px;
@@ -145,4 +173,15 @@ h1 {
     .feature h3 {
         font-size: 20px;
     }
+}
+
+footer {
+    background-image: url('background.jpg'); /* Path to your image */
+    background-size: cover; /* Ensure the image covers the entire footer */
+    background-position: center;
+    background-attachment: fixed; /* Keep the background fixed */
+    opacity: 0.5; /* Reduce opacity of the footer background */
+    color: white;
+    padding: 20px;
+    text-align: center;
 }
