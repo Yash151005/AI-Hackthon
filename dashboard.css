@@ -1,4 +1,4 @@
-* {
+* { 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -123,4 +123,27 @@ h1 {
     color: white;
     cursor: pointer;
     border-radius: 5px;
+}
+
+.link-box {
+    margin-top: 20px;
+    text-align: center;
+    padding: 15px;
+    background-color: #333;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    margin-bottom: 10px;
+}
+
+.link-box a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+    display: block;
+    text-align: center;
+}
+
+.link-box a:hover {
+    text-decoration: underline;
 }
