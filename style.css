@@ -157,6 +157,12 @@ h1 {
     color: #dcdcdc;
 }
 
+.feature .primary{
+    background-color: #20e5f6;
+    align-items: center;
+    border-radius: 2px;
+}
+
 /* Responsive Adjustments */
 @media screen and (max-width: 1024px) {
     .features {
