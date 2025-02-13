@@ -18,3 +18,6 @@ document.querySelector('.chat-input').addEventListener('keypress', function(e) {
         document.querySelector('.send-button').click();
     }
 });
+// Add this script to dashboard.js
+
+

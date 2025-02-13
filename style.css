@@ -9,6 +9,7 @@ body {
     position: relative; /* To allow the pseudo-element overlay */
 }
 
+
 /* Pseudo-element for background overlay */
 body::before {
     content: "";
