@@ -17,7 +17,7 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: url('background2.png'); /* Path to your image */
+    background-image: url('background.png'); /* Path to your image */
     height: 850px;
     background-size: cover;
     background-position: center;
