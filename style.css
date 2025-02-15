@@ -19,7 +19,7 @@ body::before {
     right: 0;
     bottom: 0;
     background-image: url('background.png'); /* Path to your image */
-    height: 850px;
+    height: 950px;
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -156,9 +156,12 @@ h1 {
     line-height: 1.5;
     color: #dcdcdc;
 }
-
+.my{
+    font-weight: bold;
+    font-size: 15px;
+}
 .feature .primary{
-    background-color: #20e5f6;
+    background-color: #fca311;
     align-items: center;
     border-radius: 2px;
 }

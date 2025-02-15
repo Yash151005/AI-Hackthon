@@ -112,6 +112,11 @@ h1 {
     border-radius: 5px;
 }
 
+.chat-box .message{
+    font-weight: bold;
+    font-size: medium;
+}
+
 .action-buttons {
     margin-top: 20px;
     display: flex;
@@ -131,11 +136,11 @@ h1 {
 .link-box {
     margin-top: 20px;
     text-align: center;
-    padding: 15px;
+    padding: 10px;
     background-color: #20e5f6;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    width: 60%;
+    width: 40%;
     margin-bottom: 10px;
 }
 
